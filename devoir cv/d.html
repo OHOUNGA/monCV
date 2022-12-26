@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>photo</title>
+</head>
+<body>
+	
+   <img name="slide">
+   <h2>Mes Photos</h2>
+   <style >
+   	img{
+   		width: 400px;
+   		height: 800px;
+   		position:absolute;
+   		top: 50%;
+   		left: 50%;
+   		transform:translate(-50%,-50%);
+   	}
+   </style>
+   <script >
+   	var i=0;
+   	
+   	  var images =['ch.jpg' , '2.jpg','3.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg', '11.jpg'];
+   	  var time =3000;
+
+   	  function changeImg(){
+   	  	document.slide.src =images[i];
+
+   	  	if(i<images.length -1){
+   	  		i++;
+   	  	}else{
+   	  		i=0;
+   	  	}
+   	  	setTimeout("changeImg()", time);
+   	  }
+   	  window.onload=changeImg;
+   </script>
+</body>
+</html>
